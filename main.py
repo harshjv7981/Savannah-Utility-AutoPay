@@ -18,7 +18,7 @@ from selenium.webdriver.support                 import expected_conditions as EC
 from selenium.webdriver.common.keys             import Keys
 from selenium.webdriver.common.action_chains    import ActionChains
 from selenium.common.exceptions                 import (NoSuchElementException)
-
+from dotenv import load_dotenv
 
 load_dotenv()
 
