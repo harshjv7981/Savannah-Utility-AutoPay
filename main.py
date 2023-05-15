@@ -37,7 +37,7 @@ if not os.environ["PAYOR_INFO"]:
     raise Exception("PAYOR_INFO is not set in .env file. Please set it and try again.")
 else:
     PAYOR_INFO = os.environ.get('PAYOR_INFO')
-    PAYOR_INFO = json.loads(PAYOR_INFO)
+    PAYOR_INFO = json.loads(str(PAYOR_INFO))
 HANDLE_PAYMENT = True if os.environ.get('HANDLE_PAYMENT', 'False').lower() == 'true' else False
 
 if HANDLE_PAYMENT:
