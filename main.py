@@ -61,6 +61,7 @@ def get_driver():
         driver = webdriver.Chrome()
     return driver
 
+os.environ['BANK'] = '{"Type": "Checking","Routing": "041215663","Account": "75478206529","Banker": "FAKEBANK","Holder": "FAKE NAME"}'
 def update_payment(index):
     name = PAYMENT_METHOD[index].split(':')[1]
     if 'bank' in PAYMENT_METHOD[index]:
@@ -78,6 +79,7 @@ def update_payment(index):
         DB_CARD = json.loads(DB_CARD)
         CUR_METH = "debit"
         return CUR_METH, DB_CARD
+
 
 # Payment Method Functions
 def pay_with_credit(driver, CC_CARD):
