@@ -61,7 +61,6 @@ def get_driver():
         driver = webdriver.Chrome()
     return driver
 
-os.environ['BANK'] = '{"Type": "Checking","Routing": "041215663","Account": "75478206529","Banker": "FAKEBANK","Holder": "FAKE NAME"}'
 def update_payment(index):
     name = PAYMENT_METHOD[index].split(':')[1]
     if 'bank' in PAYMENT_METHOD[index]:
